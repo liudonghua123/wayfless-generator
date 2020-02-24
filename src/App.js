@@ -8,7 +8,8 @@ const { Header, Content, Footer } = Layout;
 const { Title, Paragraph, Text } = Typography;
 const { decodeURIComponent } = window;
 
-const normalize = (url, idp_domain) => decodeURIComponent(url).replace('{idp_domain}', `${idp_domain.trim()}.edu.cn`);
+const normalize = (url, idp_domain) =>
+  decodeURIComponent(url).replace(/\{idp_domain\}/g, `${idp_domain.trim()}.edu.cn`);
 
 const copyHandler = url => e => {
   copy(url).then(() => {
