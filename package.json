@@ -22,7 +22,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "cross-env PUBLIC_URL=/wayfless-generator npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.0",
     "gh-pages": "^2.2.0"
   }
 }
