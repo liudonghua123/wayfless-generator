@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Menu, Breadcrumb, Row, Col, Typography, Form, Button, Input, List, Card, message } from 'antd';
+import { Layout, Menu, Breadcrumb, Row, Col, Typography, Form, Button, Input, List, Card, message, Icon } from 'antd';
 import './App.css';
 import data from './data';
 
@@ -47,18 +47,19 @@ function App() {
             <Title>WAYFless</Title>
             <Paragraph>
               <Text strong>WAYFless</Text>
-              是一种通过将IDP地址组合在URL中，避免读者在采用<Text strong>Shibboleth</Text>
+              是一种通过将IDP地址组合在URL中，避免用户在采用<Text strong>Shibboleth</Text>
               认证时必须先选择自己所在机构的方法，省去了不同SP界面各不相同的复杂认证步骤。
             </Paragraph>
             <Paragraph>
-              请在下面输入框中输入您自己所在学校idp系统的域名，例如<Text code>idp.ynu</Text>
-              <Text strong>.edu.cn</Text>，列表中即可自动生成
-              <Text strong>WAYFless</Text>链接，可以链接后的点击复制或访问。
+              请在下面输入框中输入您自己所在学校idp系统的域名，已省略 <Text mark>.edu.cn</Text> 部分，例如输入
+              <Text code>idp.ynu</Text>，列表中即可自动生成<Text code>idp.ynu.edu.cn</Text>对应的各大数据库的
+              <Text strong>WAYFless</Text>链接，可以点击其后的复制或打开进行后续操作。
             </Paragraph>
             <Paragraph>
-              加入<Text strong>CARSI</Text>联盟的各个学校均可使用此方式，方便读者使用。
+              加入<Text strong>CARSI</Text>联盟的各个学校均可使用此方式，方便用户使用。
             </Paragraph>
             <Paragraph>本词条由深圳大学图书馆、香港中文大学(深圳)图书馆、清华大学图书馆共同维护。</Paragraph>
+            <Paragraph>本列表内容较多，可以根据数据库名称输入过滤字词进行过滤筛选！</Paragraph>
           </Typography>
           <Row>
             <Col span={24}>
@@ -73,7 +74,7 @@ function App() {
                     onChange={e => setIdpDomainValue(e.target.value)}
                   />
                 </Form.Item>
-                <Form.Item label="输入过滤关键字词">
+                <Form.Item label="输入过滤字词">
                   <Input allowClear placeholder="EBSCO" value={spValue} onChange={e => setSpValue(e.target.value)} />
                 </Form.Item>
               </Form>
@@ -93,6 +94,7 @@ function App() {
                           </div>
                           <div className="operation-container">
                             <Button
+                              icon="copy"
                               disabled={!url.includes('{idp_domain}')}
                               type="primary"
                               onClick={copyHandler(normalize(url, idpDomainValue))}
@@ -102,11 +104,11 @@ function App() {
                           </div>
                           <div className="operation-container">
                             <Button
+                              icon="global"
                               disabled={!url.includes('{idp_domain}')}
-                              type="primary"
                               onClick={openURL(normalize(url, idpDomainValue))}
                             >
-                              访问
+                              打开
                             </Button>
                           </div>
                         </Row>
@@ -119,7 +121,12 @@ function App() {
           </Row>
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>WAYFless generator ©2018 Created by Donghua Liu</Footer>
+      <Footer style={{ textAlign: 'center' }}>
+        WAYFless generator ©2020 Created by Donghua Liu,{' '}
+        <a href="https://github.com/liudonghua123/wayfless-generator">
+          <Icon type="github" />
+        </a>
+      </Footer>
     </Layout>
   );
 }
