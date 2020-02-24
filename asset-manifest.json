@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.aba2f72f.chunk.css",
-    "main.js": "/static/js/main.a96dc281.chunk.js",
-    "main.js.map": "/static/js/main.a96dc281.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6e393375.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6e393375.js.map",
-    "static/css/2.06ffd1ac.chunk.css": "/static/css/2.06ffd1ac.chunk.css",
-    "static/js/2.c6d0461c.chunk.js": "/static/js/2.c6d0461c.chunk.js",
-    "static/js/2.c6d0461c.chunk.js.map": "/static/js/2.c6d0461c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9abd679cd0a421420bbb2b46814c9d72.js": "/precache-manifest.9abd679cd0a421420bbb2b46814c9d72.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.06ffd1ac.chunk.css.map": "/static/css/2.06ffd1ac.chunk.css.map",
-    "static/css/main.aba2f72f.chunk.css.map": "/static/css/main.aba2f72f.chunk.css.map",
-    "static/js/2.c6d0461c.chunk.js.LICENSE.txt": "/static/js/2.c6d0461c.chunk.js.LICENSE.txt"
+    "main.css": "/wayfless-generator/static/css/main.aba2f72f.chunk.css",
+    "main.js": "/wayfless-generator/static/js/main.678d891e.chunk.js",
+    "main.js.map": "/wayfless-generator/static/js/main.678d891e.chunk.js.map",
+    "runtime-main.js": "/wayfless-generator/static/js/runtime-main.6bfc5edd.js",
+    "runtime-main.js.map": "/wayfless-generator/static/js/runtime-main.6bfc5edd.js.map",
+    "static/css/2.06ffd1ac.chunk.css": "/wayfless-generator/static/css/2.06ffd1ac.chunk.css",
+    "static/js/2.87633719.chunk.js": "/wayfless-generator/static/js/2.87633719.chunk.js",
+    "static/js/2.87633719.chunk.js.map": "/wayfless-generator/static/js/2.87633719.chunk.js.map",
+    "index.html": "/wayfless-generator/index.html",
+    "precache-manifest.8437272f1f94beda745656b16a838fef.js": "/wayfless-generator/precache-manifest.8437272f1f94beda745656b16a838fef.js",
+    "service-worker.js": "/wayfless-generator/service-worker.js",
+    "static/css/2.06ffd1ac.chunk.css.map": "/wayfless-generator/static/css/2.06ffd1ac.chunk.css.map",
+    "static/css/main.aba2f72f.chunk.css.map": "/wayfless-generator/static/css/main.aba2f72f.chunk.css.map",
+    "static/js/2.87633719.chunk.js.LICENSE.txt": "/wayfless-generator/static/js/2.87633719.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e393375.js",
+    "static/js/runtime-main.6bfc5edd.js",
     "static/css/2.06ffd1ac.chunk.css",
-    "static/js/2.c6d0461c.chunk.js",
+    "static/js/2.87633719.chunk.js",
     "static/css/main.aba2f72f.chunk.css",
-    "static/js/main.a96dc281.chunk.js"
+    "static/js/main.678d891e.chunk.js"
   ]
 }
