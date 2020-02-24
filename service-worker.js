@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wayfless-generator/precache-manifest.8437272f1f94beda745656b16a838fef.js"
+  "/wayfless-generator/precache-manifest.497feb8f8b6c720e1bebf20097a5e8a1.js"
 );
 
 self.addEventListener('message', (event) => {
