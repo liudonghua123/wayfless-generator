@@ -48,6 +48,7 @@
 .link-container {
   flex-grow: 1;
   padding: 5px;
+  max-width: calc(100% - 185px);
 }
 
 .operation-container {
@@ -73,4 +74,18 @@
 
 .mainContent .ant-card .ant-card-head-title {
   padding: 2px 0;
+}
+
+.mainContent .ant-row-flex {
+  flex-wrap: nowrap;
+}
+
+.link-container .ql-editor {
+  white-space: nowrap;
+  padding: 9px 15px;
+}
+
+.link-container ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
