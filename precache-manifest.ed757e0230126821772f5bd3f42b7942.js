@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78f4cfd8a134878f700165143bc38132",
+    "revision": "12e66ea06c3f9bf15864a4f0de125fbb",
     "url": "/wayfless-generator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wayfless-generator/static/css/2.019a8dfc.chunk.css"
   },
   {
-    "revision": "38e7f80a84263b9dbc79",
+    "revision": "55c5b0428fd24f25f358",
     "url": "/wayfless-generator/static/css/main.063a958c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wayfless-generator/static/js/2.e58e624e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "38e7f80a84263b9dbc79",
-    "url": "/wayfless-generator/static/js/main.d9590575.chunk.js"
+    "revision": "55c5b0428fd24f25f358",
+    "url": "/wayfless-generator/static/js/main.007035c1.chunk.js"
   },
   {
     "revision": "79c1981d005679742edf",
