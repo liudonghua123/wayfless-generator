@@ -13,16 +13,16 @@ const { Title, Paragraph, Text } = Typography;
 const { decodeURIComponent } = window;
 
 const normalize = (url, idp_domain) =>
-  decodeURIComponent(url).replace(/\{idp_domain\}/g, `${idp_domain.trim()}.edu.cn`);
+  decodeURIComponent(decodeURIComponent(url)).replace(/\{idp_domain\}/g, `${idp_domain.trim()}.edu.cn`);
 
 const normalizeStyled = (url, idp_domain) => {
   console.info(`idp_domain: ${idp_domain}`);
   const styledText = idp_domain
-    ? `<p>${decodeURIComponent(url).replace(
+    ? `<p>${decodeURIComponent(decodeURIComponent(url)).replace(
         /\{idp_domain\}/g,
         `<span style="background-color: rgb(0, 255, 0);">${idp_domain.trim()}.edu.cn</span>`
       )}</p>`
-    : `<p>${decodeURIComponent(url).replace(
+    : `<p>${decodeURIComponent(decodeURIComponent(url)).replace(
         /\{idp_domain\}/g,
         `<span style="background-color: rgb(255, 255, 0);">${idp_domain.trim()}.edu.cn</span>`
       )}</p>`;
