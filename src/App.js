@@ -43,7 +43,7 @@ function App() {
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>WAYFless</Breadcrumb.Item>
         </Breadcrumb>
-        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+        <div style={{ background: '#fff', padding: 24, minHeight: 280 }} className="mainContent">
           <Typography>
             <Title>WAYFless</Title>
             <Paragraph>
@@ -91,12 +91,12 @@ function App() {
                       {item.accessURLs.map(url => (
                         <Row type="flex" justify="start" key={url}>
                           <div className="link-container">
-                            <Input disabled={!url.includes('{idp_domain}')} value={normalize(url, idpDomainValue)} />
+                            <Input disabled={!url.includes('{idp_domain}') || !idpDomainValue.trim()} value={normalize(url, idpDomainValue)} />
                           </div>
                           <div className="operation-container">
                             <Button
                               icon="copy"
-                              disabled={!url.includes('{idp_domain}')}
+                              disabled={!url.includes('{idp_domain}') || !idpDomainValue.trim()}
                               type="primary"
                               onClick={copyHandler(normalize(url, idpDomainValue))}
                             >
@@ -106,7 +106,7 @@ function App() {
                           <div className="operation-container">
                             <Button
                               icon="global"
-                              disabled={!url.includes('{idp_domain}')}
+                              disabled={!url.includes('{idp_domain}') || !idpDomainValue.trim()}
                               onClick={openURL(normalize(url, idpDomainValue))}
                             >
                               打开
