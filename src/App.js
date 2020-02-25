@@ -13,7 +13,7 @@ const { Title, Paragraph, Text } = Typography;
 const { decodeURIComponent } = window;
 
 const normalize = (url, idp_domain) =>
-  decodeURIComponent(decodeURIComponent(url)).replace(/\{idp_domain\}/g, `${idp_domain.trim()}.edu.cn`);
+  url.replace(/\{idp_domain\}/g, `${idp_domain.trim()}.edu.cn`);
 
 const normalizeStyled = (url, idp_domain) => {
   console.info(`idp_domain: ${idp_domain}`);
@@ -117,7 +117,6 @@ function App() {
                       {item.accessURLs.map(url => (
                         <Row type="flex" justify="start" key={url}>
                           <div className="link-container">
-                            {/* <Input disabled={!url.includes('{idp_domain}') || !idpDomainValue.trim()} value={normalize(url, idpDomainValue)} /> */}
                             <ReactQuill
                               readOnly
                               modules={{ toolbar: false }}
