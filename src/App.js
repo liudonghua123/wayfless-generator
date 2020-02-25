@@ -6,6 +6,8 @@ import data from './data';
 import copy from 'clipboard-copy';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import GHCorner from 'react-gh-corner';
+
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph, Text } = Typography;
 const { decodeURIComponent } = window;
@@ -48,10 +50,18 @@ function App() {
     : data;
   return (
     <Layout className="layout">
+      <GHCorner
+        href="https://github.com/liudonghua123/wayfless-generator"
+        positon="top-right"
+        bgColor="#550088"
+        size={100}
+        ariaLabel="Check my project"
+        openInNewTab={true}
+      />
       <Header>
         <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ lineHeight: '64px' }}>
-          <Menu.Item key="1">WAYFless</Menu.Item>
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['WAYFless']} style={{ lineHeight: '64px' }}>
+          <Menu.Item key="WAYFless">WAYFless</Menu.Item>
         </Menu>
       </Header>
       <Content style={{ padding: '0 50px' }}>
@@ -146,7 +156,7 @@ function App() {
       <Footer style={{ textAlign: 'center' }}>
         WAYFless generator ©2020 Created by Donghua Liu,{' '}
         <a href="https://github.com/liudonghua123/wayfless-generator">
-          <Icon type="github" />
+          <Icon style={{ fontSize: '20px' }} type="github" />
         </a>
       </Footer>
     </Layout>
